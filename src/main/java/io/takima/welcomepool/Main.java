@@ -1,13 +1,12 @@
 package io.takima.welcomepool;
 
-import java.sql.*;
-public class ConnectPostgreSQL
+public class Main
 {
     public static void main(String args[])
     {
         try
         {
-            //étape 1: charger la classe de driver
+            /*//étape 1: charger la classe de driver
             Class.forName("org.postgresql.Driver");
             //étape 2: créer l'objet de connexion
             Connection conn = DriverManager.getConnection(
@@ -22,7 +21,7 @@ public class ConnectPostgreSQL
                 System.out.println(res.getInt(1)+"  "+res.getString(2)
                         +"  "+res.getString(3)+"  "+res.getString(4));
             //étape 5: fermez l'objet de connexion
-            conn.close();
+            conn.close();*/
         }
         catch(Exception e){
             System.out.println(e);
