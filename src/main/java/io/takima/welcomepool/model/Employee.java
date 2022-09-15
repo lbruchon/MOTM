@@ -18,4 +18,16 @@ public class Employee {
     public int getEmployeeUid() {
         return EmployeeUid;
     }
+
+    public String getEmployeeName() {
+        return EmployeeName;
+    }
+
+    public String getEmployeeEmail() {
+        return EmployeeEmail;
+    }
+
+    public LocalDate getEmployeeBirthdate() {
+        return EmployeeBirthdate;
+    }
 }
