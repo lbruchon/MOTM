@@ -34,8 +34,8 @@ public class Controller extends HttpServlet {
             dispatcher.forward(req, resp);
 
         } else if (userPath.equals("/addmember")) {
-            req.setAttribute("addMember", this.addmemberservice);
-            RequestDispatcher dispatcher = req.getRequestDispatcher("/pages/add_member.jsp");
+            req.setAttribute("addMember", addmemberservice);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/add_member.jsp");
             dispatcher.forward(req, resp);
         }
     }
