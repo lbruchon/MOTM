@@ -7,5 +7,11 @@ rm -rf out/*
 
 classpath=$(find ./lib -name "*.jar" | paste -sd ":")
 
+echo class
+
 
 javac -cp $classpath -d out/classes $(find ./src/main -name "*.java")
+mkdir -p out/lib
+cp -R $(find ./lib -name "*.jar") out/lib
+
+

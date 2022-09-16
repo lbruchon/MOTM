@@ -70,18 +70,18 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <form action="" method="post" class="">
+                                    <form action="" method="POST" class="">
                                         <div class="form-group">
                                             <label for="name">Name</label>
-                                            <input type="text" class="input-lg form-control" id="name" placeholder="Nom">
+                                            <input type="text" class="input-lg form-control" id="name" name="name"  placeholder="Nom">
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="email" class="input-lg form-control" id="email" placeholder="Email Address">
+                                            <input type="email" class="input-lg form-control" id="email" name="email" placeholder="Email Address">
                                         </div>
                                         <div class="form-group">
                                             <label for="date">Birthdate</label>
-                                            <input type="date" class="input-lg form-control" id="date" placeholder="DD/MM/YYYY" min="2004-01-01" max="1910-01-01" >
+                                            <input type="text" class="input-lg form-control" id="date" name="date" placeholder="DD/MM/YYYY" min="1910-01-01" max="2004-01-01" >
                                         </div>
 
                                         <div class="text-right">

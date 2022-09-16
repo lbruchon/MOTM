@@ -5,15 +5,20 @@ import io.takima.welcomepool.model.Employee;
 
 public class EmployeeService {
 
-    public EmployeeService(EmployeeDao employeeDao){
+    public EmployeeService(EmployeeDao employeeDao) {
         super();
         this.employeeDao=employeeDao;
     }
 
-    private EmployeeDao employeeDao;
+    private EmployeeDao employeeDao = new EmployeeDao();
 
-    public long create(Employee employee){
+    public EmployeeService() {
+
+    }
+
+    public long create(Employee employee) {
         // TODO: créer un client
+
 
         return this.employeeDao.create(employee);
 
