@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/addmember")
 public class AddMemberServlet extends HttpServlet{
 
-    AddMemberService addmemberservice = new AddMemberService();
+
 
     public AddMemberServlet() {
     }
@@ -23,8 +23,6 @@ public class AddMemberServlet extends HttpServlet{
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-            req.setAttribute("addMember", addmemberservice);
             RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/pages/add_member.jsp");
             dispatcher.forward(req, resp);
 
