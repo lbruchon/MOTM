@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="date">Birthdate</label>
-                                            <input type="text" class="input-lg form-control" id="date" placeholder="DD/MM/YYYY">
+                                            <input type="date" class="input-lg form-control" id="date" placeholder="DD/MM/YYYY" min="2004-01-01" max="1910-01-01" >
                                         </div>
 
                                         <div class="text-right">
@@ -113,10 +113,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="/resources/js/jquery-3.1.1.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
 
 </body>
 

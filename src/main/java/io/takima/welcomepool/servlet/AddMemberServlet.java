@@ -1,22 +1,29 @@
 package io.takima.welcomepool.servlet;
 
+import io.takima.welcomepool.model.Employee;
+import io.takima.welcomepool.service.EmployeeService;
+
 import java.io.IOException;
+import java.time.LocalDate;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.rpc.ServiceException;
 
 @WebServlet("/addmember")
 public class AddMemberServlet extends HttpServlet{
 
-
+    EmployeeService employeeservice = new EmployeeService();
     public AddMemberServlet() {
     }
 
     public void init() {
+
         System.out.println("Servlet initialized successfully");
+
     }
 
 
@@ -26,4 +33,14 @@ public class AddMemberServlet extends HttpServlet{
             dispatcher.forward(req, resp);
 
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Employee employee = new Employee( request.getParameter("name"),request.getParameter("email"), LocalDate.parse(request.getParameter("date")), 0);
+        employeeservice.create(employee);
+        doGet(request, response);
+    }
+
+
 }

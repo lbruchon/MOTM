@@ -1,12 +1,20 @@
 package io.takima.welcomepool.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Employee {
     private String name;
     private String email;
-    private Date birthdate;
-    private String uuid;
+    private LocalDate birthdate;
+    private int uuid;
+
+    public Employee(String name, String email, LocalDate birthdate, int i) {
+        this.name = name;
+        this.email = email;
+        this.birthdate = birthdate;
+        this.uuid = uuid;
+    }
 
 
     public String getName() {
