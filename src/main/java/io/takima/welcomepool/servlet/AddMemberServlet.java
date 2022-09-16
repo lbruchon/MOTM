@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 public class AddMemberServlet extends HttpServlet{
 
 
-
     public AddMemberServlet() {
     }
 
