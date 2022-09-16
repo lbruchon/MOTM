@@ -1,14 +1,17 @@
 package io.takima.welcomepool;
 
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/home")
 public class HomeServlet extends HttpServlet{
 
-    HomeService helloService = new HomeService();
+    HomeService homeservice = new HomeService();
 
     public HomeServlet() {
     }
@@ -17,7 +20,11 @@ public class HomeServlet extends HttpServlet{
         System.out.println("Servlet initialized successfully");
     }
 
-    protected void doGet(HttpServletRequest var1, HttpServletResponse var2) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        req.setAttribute("homeService", homeservice);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/index.jsp");
+        dispatcher.forward(req, resp);
 
     }
 }
