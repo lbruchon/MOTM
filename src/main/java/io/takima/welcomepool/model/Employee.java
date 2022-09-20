@@ -1,16 +1,17 @@
 package io.takima.welcomepool.model;
 
 public class Employee {
+    private int uuid;
     private String name;
     private String email;
     private String birthdate;
-    private int uuid;
 
-    public Employee(String name, String email, String birthdate, int i) {
+
+    public Employee(int uuid, String name, String email, String birthdate) {
+        this.uuid = uuid;
         this.name = name;
         this.email = email;
         this.birthdate = birthdate;
-        this.uuid = uuid;
     }
 
 

@@ -1,6 +1,7 @@
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+
+         <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+         <%@page pageEncoding="UTF-8" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -156,98 +157,29 @@
                                             <th class="text-right">Action</th>
                                         </tr>
                                         </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>Loïc Ortola</td>
-                                            <td>lortola@e-biz.fr</td>
-                                            <td>10/02/1988</td>
-                                            <td  class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Antoine Lebel</td>
-                                            <td>alebel@e-biz.fr</td>
-                                            <td>11/07/1991</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kévin Bottero</td>
-                                            <td>kbottero@e-biz.fr</td>
-                                            <td>20/12/1978</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Romain Larroque</td>
-                                            <td>rlarroque@e-biz.fr</td>
-                                            <td>18/03/1992</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hubert B. Delabatte</td>
-                                            <td>hdelabatte@e-biz.fr</td>
-                                            <td>10/02/1916</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Guillaume Nostrenoff</td>
-                                            <td>gnostrenoff@e-biz.fr</td>
-                                            <td>04/10/1991</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hugo Bernardi</td>
-                                            <td>hbernardi@e-biz.fr</td>
-                                            <td>13/04/1992</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Olivier Duvoid</td>
-                                            <td>oduvoid@e-biz.fr</td>
-                                            <td>13/04/1992</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>FP Chalopin</td>
-                                            <td>fpchalopin@e-biz.fr</td>
-                                            <td>13/04/1992</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jones Magloire</td>
-                                            <td>jmagloire@e-biz.fr</td>
-                                            <td>13/04/1992</td>
-                                            <td class="text-right">
-                                                <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
-                                                <a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> Remove</a>
-                                            </td>
-                                        </tr>
-                                        </tbody>
+
+                                <c:forEach var="employee" items="${employees}">
+                                <tbody>
+                                    <tr>
+                                        <td>${employee.name}</td>
+                                        <td>${employee.email}</td>
+                                        <td>${employee.birthdate}</td>
+                                        <td  class="text-right" style="display: flex; flex-direction: row;  align-items: center; justify-content: flex-end;">
+                                          <a href="#" class="btn btn-sm btn-warning"><i class="fa fa-pencil"></i> Edit</a>
+                                          <form class="form-horizontal" method="POST"  style = "padding: 2px">
+                                              <button type = "submit" class="btn btn-sm btn-danger">
+                                                  <input type="hidden" id="id" name="uuid" value="${employee.uuid}">
+                                                  <i class="fa fa-trash"></i>
+                                                  Remove
+                                                </button>
+                                            </form>
+                                        </td>
+
+                                    </tr>
+                                    </tbody>
+                                </c:forEach>
+
+
                                     </table>
                                     <div class="text-center">
                                         <ul class="pagination">

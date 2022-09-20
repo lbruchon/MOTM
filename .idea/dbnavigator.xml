@@ -36,7 +36,9 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="ec5876bc-a535-446f-8d7c-6609a0929744" object-ref="schemas/public/tables/employee" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="be6dda4f-ebc8-467f-865c-cdd58dd225df" />
@@ -44,6 +46,11 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="be6dda4f-ebc8-467f-865c-cdd58dd225df" dataset="public.employe" active-filter-id="" />
+    <filter-actions connection-id="ec5876bc-a535-446f-8d7c-6609a0929744" dataset="public.employee" active-filter-id="EMPTY_FILTER">
+      <filter id="b469cac1-cefa-4195-882d-656488c3dd9c" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="uuid" operator="is null" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

@@ -42,7 +42,7 @@ public class AddMemberServlet extends HttpServlet{
 
         System.out.println("name" + request.getParameter("name"));
 
-        Employee employee = new Employee( request.getParameter("name"),request.getParameter("email"), request.getParameter("date"), 0);
+        Employee employee = new Employee( 0, request.getParameter("name"),request.getParameter("email"), request.getParameter("date"));
 
         employeeservice.create(employee);
         doGet(request, response);
