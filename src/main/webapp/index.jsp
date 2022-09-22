@@ -40,7 +40,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Mood of the month</a>
+            <a class="navbar-brand" href="home">Mood of the month</a>
         </div>
         <!-- /.navbar-header -->
 
@@ -52,7 +52,7 @@
                 <ul class="dropdown-menu dropdown-user">
                     <li><a href="addmember"><i class="fa fa-user fa-fw"></i> Add member</a>
                     </li>
-                    <li><a href="edit_motm.html"><i class="fa fa-calendar fa-fw"></i> Change MOTM Template</a>
+                    <li><a href="editmotm"><i class="fa fa-calendar fa-fw"></i> Change MOTM Template</a>
                     </li>
                 </ul>
             </li>
@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="add_member.html">
+                    <a href="addmember">
                         <div class="panel-footer">
                             <span class="pull-left">Add member</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -103,7 +103,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="edit_motm.html">
+                    <a href="editmotm">
                         <div class="panel-footer">
                             <span class="pull-left">Edit MOTM content</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -125,7 +125,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="dashboard.html">
+                    <a href="dashboard">
                         <div class="panel-footer">
                             <span class="pull-left">Show dashboard</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -133,6 +133,7 @@
                         </div>
                     </a>
                 </div>
+
             </div>
         </div>
         <!-- /.row -->
@@ -285,10 +286,10 @@
                             </div>
                         </div>
 
-                        <a href="stats.html" class="btn btn-default btn-block">View more reports</a>
+                        <a href="dashboard" class="btn btn-default btn-block">View more reports</a>
                     </div>
                     <!-- /.panel-body -->
-                </div>
+                </div>href
                 <!-- /.panel -->
 
                 <div class="panel panel-default">

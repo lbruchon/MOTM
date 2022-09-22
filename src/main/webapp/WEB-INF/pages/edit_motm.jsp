@@ -45,13 +45,13 @@
                         <i class="fa fa-gear fa-fw"></i> Manage MOTMs <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="add_member.html"><i class="fa fa-user fa-fw"></i> Add member</a>
+                        <li><a href="addmember"><i class="fa fa-user fa-fw"></i> Add member</a>
                         </li>
-                        <li><a href="edit_motm.html"><i class="fa fa-calendar fa-fw"></i> Change MOTM Template</a>
+                        <li><a href="editmotm"><i class="fa fa-calendar fa-fw"></i> Change MOTM Template</a>
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>!
         </nav>
 
         <div id="page-wrapper" class="container-fluid">
